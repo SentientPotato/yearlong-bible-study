@@ -5,11 +5,67 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
-biblio-style: apalike
+biblio-style: authoryear
 link-citations: yes
-description: "This is a study guide for reading through the whole Bible over the course of a year."
+fontsize: 12pt
+classoption: oneside
+description: "These are my notes from reading through the whole Bible over the course of a year."
 ---
 
-# Preface
+```{r setup, include = FALSE}
+library(dplyr)
+library(huxtable)
+options(huxtable.knit_print_df = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+print_hux <- function(dat_hux, dat_df, cap) {
+    if ( knitr::is_html_output(excludes = "epub") | knitr::is_latex_output() ) {
+        dat_hux %>% set_caption(cap)
+    } else {
+        knitr::kable(dat_df, caption = cap, format = "pipe")
+    }
+}
+## This way of dealing with a featured content box (in order to add it to the
+## Table of Contents) is adapted from code here:
+## https://stackoverflow.com/a/70260471/
+block_toc <- function(title, level, content, output) {
+    if ( knitr::is_html_output(excludes = "epub") ) {
+        title <- paste(paste(rep("#", level), collapse = ""), title, "{-}")
+        cat('<div class = "featurebox">', title, '<p>',
+            content, '</p>\n</div>', sep = "\n")
+    } else if ( knitr::is_html_output() ) {
+        title <- paste(paste(rep("#", level), collapse = ""), title)
+        cat(title, content, sep = "\n")
+    } else {
+        level <- c("chapter", "section", "subsection")[level]
+        cat('\\addcontentsline{toc}{', level, '}{', title, '}',
+            '\n\\vspace*{\\baselineskip}',
+            '\n\\begin{featurebox}\n\\textbf{\\noindent\\large ', title,
+            '}\n\\medskip\n\n', content,
+            '\n\n\\end{featurebox}', sep = "")
+    }
+}
+```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# Preface {-}
+
+Over the last few years, my theology has changed quite a bit.
+I was raised in a conservative evangelical tradition.
+Conservative evangelicals have a very particular reading of the Bible, which supposedly comes from reading it literally, or according to the "clear" meaning of the bare text.
+But this also typically means reading without (a good) consideration of the context of the broader Biblical text, the purpose for which particular parts of the Bible were written, or the cultural context in which the words would have been received.
+In other words, I was originally taught to read what the Bible "says" rather than what it "means", if that makes sense.
+
+I've learned a lot since then.
+I've learned a lot about myself.
+I've learned that I basically have the values I was raised with, but I disagree with what that translates into specifically politically and theologically.
+I've learned about the process that brought us the Bible we have today.
+And I think I've learned a lot about what some of this text should mean for us today.
+
+Some of this came from reading scholarly work or talking to others.
+Some came from prayerful reflection.
+There's a lot of the Bible I've re-read since or as a part of this transition, but I've yet to go through from cover to cover since my outlook started changing.
+So this project is me going through the entirety of the text now that my perspective is different since the last time I visited some of these passages, and making notes on the whole thing.
+
+I don't claim to be a theological or biblical expert.
+I don't have a seminary degree, I don't have experience as a pastor.
+What I have is a few decades' experience as a Christian and a human, a deep desire to learn as much from God's Word as I can, and to get it right, and lots of reading and thinking done toward that end.
+So if someone other than me ends up reading these notes, take them for what they are, and I hope they help.

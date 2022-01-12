@@ -2,4 +2,4 @@
 
 ### Sentient Potato
 
-This is a study guide for reading through the whole Bible over the course of a year.
+These are my notes from reading through the whole Bible over the course of a year.

@@ -1,0 +1,105 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+# Week One {#week1}
+
+## Day One {#day1}
+
+Today we will read through Genesis 1--2, which gives creation narrative(s), and Psalm 139.
+
+### Background information on Genesis {#genesis}
+
+Genesis is the first book of the Bible that tells of the creation of the Earth, Noah and the flood, and God's covenant with Abraham.
+The first five books of the Bible---Genesis, Exodus, Leviticus, Numbers, and Deuteronomy---are collectively called the Torah.
+Tradition holds the author of the Torah to be Moses (except the last chapter of Deuteronomy, which recounts Moses' death), but most modern scholars believe it was put together from multiple sources, as evidenced by blocks using distinctive language and by parallel narratives [@Schmid2021].
+Today you'll see what many identify as parallel creation narratives: the description in Genesis 1 and the beginning of Genesis 2, and the story in the remainder of Genesis 2.
+
+Whether Genesis was written by Moses alone, or a combination of sources, and whether Genesis 1--2 is a single creation account or two parallel accounts, the basic lessons I'll focus on from Genesis 1--2 will be the same.
+Whether you are a literalist who holds to Moses' authorship, or someone who sees these chapters as two parallel accounts whose specifics might best be described as "myth" need not change *too* much about how we view this passage.
+
+### The Beginning: Genesis 1:1--2:3 {#genesis1}
+
+The book of Genesis begins with an account of the creation of the heavens and the earth by God.
+In this creation narrative, God repeatedly calls into existence new aspects of our reality by command alone.
+God says, "Let there be light", and there is light, etc.
+The phases of creation each occur in one "day"; in the first "day", day and night are created, then in the second, the air and the sea, etc.
+After six "days", the heavens and the earth are fully formed and humans are created in God's image and given dominion over the earth.
+
+So should the take-away here be that God literally created everything in six days, in the order and manner specified in the text?
+Personally, I don't think that aspect of it is important.
+I think the important parts are recognizing that all that there is flows from God, and what we can learn about God and ourselves from the passage.
+But some folks find it very important, so I'm going to take a moment to talk about it.
+
+The Hebrew word used here for day is yom, which has differing meanings depending on context.
+It can be used to mean a 24 hour day, or a long but finite span of time like an "age", or even just a time period of unspecified length.
+So for people who focus on this passage as an actual account of the creation of Earth, several "literal" interpretations could be had:
+
+-   The Earth was created in six consecutive 24-hour periods (this is called "young Earth creationism")
+-   Each "day" is actually a quite-long time span, with or without gaps in between (this is called "old Earth creationism")
+
+There are several sub-types of old Earth creationism that I won't go into further.
+Many Christians also hold to non-literal interpretations of this text, focusing on its statement that God created the universe and humanity, and why, rather than getting hung up on the how.
+It is my own personal view that this passage should not be read literally, but more importantly, even if you read this passage literally, the most important lessons are the same as if you do not.
+
+So what are the important lessons we should draw from this passage?
+This narrative can teach us about the universe and about humans.
+Almost everyone has wondered at some point, "Where does it all come from?" And sure, maybe your answer is that the universe as we know came about as a result of the Big Bang, or whatever the scientific consensus is, but that's not incompatible with finding a deeper meaning in the origin of the universe.
+This creation account teaches us that God created everything from nothing, that God forged order from chaos, by His authority and power.
+It teaches us that God is the source of all life, and that humans---*all* humans---are made in God's image.
+These are powerful and important messages!
+I care *much* less about whether the "six days" is a literary device used to communicate these messages or whether it's supposed to be taken literally.
+
+There are some additional lessons we might learn from delving a bit deeper.
+For example, it's common to notice the literary structure here in this account: In the first three days, God creates spaces or environments that in the next three days He fills with inhabitants, as illustrated in Table \@ref(tab:seven-days).
+This device underscores the theme of God turning chaos into an environment habitable for humans.
+
+```{r seven-days}
+col1 <- c(
+    "Day 1: Day & Night", "Day 2: Air & Sea",
+    "Day 3: Land & Vegetation", "Day 7: A day of rest"
+)
+col2 <- c(
+    "Day 4: Sun, Moon, & Stars", "Day 5: Birds & Fish",
+    "Day 6: Land Animals & Humans", ""
+)
+creation <- hux(col1, col2, add_colnames = FALSE)
+cap <- "The Seven Days of Creation"
+creation <- creation %>% 
+    merge_across(4) %>% 
+    set_align(row = 4, value = "center") %>% 
+    theme_basic(header_rows = FALSE) %>% 
+    set_width(0.75) %>% 
+    set_background_color("white") %>% 
+    set_width(value = 0.95) %>% 
+    set_col_width(c(0.425, 0.525)) %>% 
+    set_top_border(row = 1, value = 1) %>%
+    set_bottom_border(row = nrow(creation), value = 1)
+tab <- data.frame("Odd Days" = col1, "Even Days" = col2, check.names = FALSE)
+print_hux(creation, tab, cap)
+```
+
+On "the seventh day God had finished the work he had been doing; so on the seventh day he rested from all his work" (2:2).
+There are a lot of interesting and important aspects of this.
+For one thing it rounds out the literary device of creation in a week, that the work was done and completed in one familiar "unit" of work.
+It also stresses that man should set aside time both to rest from work and to dedicate to God; the next verse says "God blessed the seventh day and made it holy, because on it he rested from all the work of creating that he had done".
+Although God Himself need not rest, he sets an example here for humans of periodically (here once a week) taking time off, which eventually becomes a command to the Israelites.
+Importantly, however, this is also completely tied up with the day being "blessed... and made... holy".
+Finally, there is an interesting literary aspect of the seventh day of rest that becomes theologically important in the New Testament: While the description of every other day of creation ends with the phrase, "And there was evening, and there was morning---the [Xth] day", we see no such phrase regarding the seventh day.
+
+```{r, results = 'asis', echo = FALSE, eval = TRUE}
+content <- "
+"
+block_toc(
+    title = "What does Genesis 1 say about gender?",
+    level = 3,
+    content = content,
+    output = knitr::opts_knit$get("rmarkdown.pandoc.to")
+)
+```
+
+### Adam and Eve: Genesis 2:4--25 {#genesis2}
+
+### Psalm 139 {#psalm139}

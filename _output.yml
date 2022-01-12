@@ -1,4 +1,6 @@
 bookdown::gitbook:
+  number_sections: false
+  toc_depth: 4
   css: style.css
   config:
     toc:
@@ -8,9 +10,12 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
 bookdown::pdf_book:
+  number_sections: false
+  toc_depth: 4
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
-  citation_package: natbib
+  citation_package: biblatex
   keep_tex: yes
-bookdown::epub_book: default
+bookdown::epub_book:
+  number_sections: true

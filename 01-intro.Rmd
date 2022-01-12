@@ -1,3 +1,28 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
 # Introduction {#intro}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This "book" represents my own personal notes on a full read through of the Bible.
+I'll attempt to complete this reading in a year, and either way I'll structure the notes in such a way that anyone reading this can follow along as a yearlong Bible reading project.
+There are many different ways to break up the text into daily readings to get through it in a year.
+If we look at chapters as dividing marks,[^intro-1] there are 1,189 chapters in the Bible, which means we need to go through about 3 and 1/4 chapters per day on average to read through the whole Bible in a year.
+
+[^intro-1]: Biblical texts did not originally contain chapter and verse divisions.
+    The evolution of this system has occurred in different ways at different times, but we haven't had the modern divisions of the Old Testament until roughly a thousand years ago or so, and about 500 years ago for the New Testament.
+    Still, these divisions are present in the text I have, and are almost universally used to refer to passages in the Bible, so I stick to this system.
+
+So the structure I'll use is to actually have daily readings for each day of 52 weeks, which will (somewhat appropriately, no?) leave an extra day (of rest) at the end of the year with no reading (two days on Leap Years; 52 weeks is 364 days).
+The reading for each day will be topical, often sticking to one topic, sometimes two, and comprise typically three or four chapters, though not necessarily all from the same book.
+
+In terms of what translation to read, there's of course a lot of difference of opinion on that, and different translations have different strengths.
+I usually read in the New International Version [@NIV].
+This is a decent translation that tries to balance thought-for-thought, or *dynamic equivalence,* translation with word-for-word, or *formal equivalence* (though the NIV does have some issues, which is fine when you're aware of them).
+Some prefer the New Revised Standard Version for a translation that balances formal and dynamic equivalence, but it does tend just a little bit more toward formal than dynamic equivalence.
+The English Standard Version is a decent translation that falls in the formal equivalence camp, as is the New American Standard Bible.
+No matter what, the best translation is the one you will read!
+When writing up these notes, I'll often try to point out translation issues to the extent I can find out they exist.
+I'm not a Hebrew or Greek scholar, though I have tried to learn about the languages biblical texts were written in and become comfortable researching issues of translation in academic sources so that I can better understand the Word.
